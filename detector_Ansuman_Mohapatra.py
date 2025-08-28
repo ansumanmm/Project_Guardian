@@ -21,7 +21,7 @@ ADDRESS_HINTS = {"street","lane","sector","nagar","block","plot","phase","villag
 def normalize_digits(s: Any) -> str:
     return re.sub(r"\D", "", str(s))
 
-def alias(text: str, salt: str = "subrat2025") -> str:
+def alias(text: str, salt: str = "Ansuman2003") -> str:
     h = hashlib.md5((salt + text).encode()).hexdigest()[:6]
     return f"X{h.upper()}"
 
@@ -144,3 +144,4 @@ def main(argv=None):
 
 if __name__=="__main__":
     raise SystemExit(main())
+
